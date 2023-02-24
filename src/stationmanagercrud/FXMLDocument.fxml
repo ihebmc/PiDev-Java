@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="388.0" prefWidth="646.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="stationmanagercrud.FXMLDocumentController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <Pane layoutX="-12.0" prefHeight="388.0" prefWidth="276.0" style="-fx-background-color: #c4e0e5; -fx-background-radius: 20px;">
+         <children>
+            <Label layoutX="31.0" layoutY="14.0" prefHeight="40.0" prefWidth="245.0" text="Station Management" textFill="#416b43">
+               <font>
+                  <Font name="Segoe UI Black" size="22.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" contentDisplay="BOTTOM" layoutX="44.0" layoutY="95.0" text="loc_ID" textFill="#375e19">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" contentDisplay="BOTTOM" layoutX="43.0" layoutY="159.0" prefHeight="17.0" prefWidth="39.0" text="Name" textFill="#375e19">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" contentDisplay="BOTTOM" layoutX="47.0" layoutY="216.0" text="Zone" textFill="#375e19">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtLoc_ID" layoutX="102.0" layoutY="92.0" prefHeight="25.0" prefWidth="158.0" />
+            <TextField fx:id="txtZone" layoutX="102.0" layoutY="213.0" prefHeight="25.0" prefWidth="158.0" />
+            <TextField fx:id="txtName" layoutX="102.0" layoutY="156.0" prefHeight="25.0" prefWidth="158.0" />
+            <Button fx:id="btnUpdate" layoutX="104.0" layoutY="338.0" mnemonicParsing="false" onAction="#Update" prefHeight="32.0" prefWidth="76.0" style="-fx-background-color: #00b4d8;" text="Modifier" textFill="WHITE" />
+            <Button fx:id="btnDelete" layoutX="186.0" layoutY="338.0" mnemonicParsing="false" onAction="#Delete" prefHeight="32.0" prefWidth="76.0" style="-fx-background-color: #c30010;" text="Supprimer" textFill="WHITE" />
+            <Button fx:id="btnAdd" layoutX="104.0" layoutY="298.0" mnemonicParsing="false" onAction="#Add" prefHeight="32.0" prefWidth="158.0" style="-fx-background-color: green;" text="Ajouter" textAlignment="CENTER" textFill="WHITE" />
+         </children>
+      </Pane>
+      <TableView fx:id="table" layoutX="264.0" layoutY="15.0" prefHeight="358.0" prefWidth="383.0">
+        <columns>
+          <TableColumn fx:id="IDColmn" prefWidth="64.0" style="-fx-background-color: #c4e0e5;" text="ID" />
+            <TableColumn fx:id="LocationColmn" prefWidth="94.0" style="-fx-background-color: #c4e0e5;" text="Location_ID" />
+          <TableColumn fx:id="NameColmn" prefWidth="119.0" style="-fx-background-color: #c4e0e5;" text="Name" />
+            <TableColumn fx:id="ZoneColmn" prefWidth="105.0" style="-fx-background-color: #c4e0e5;" text="Zone" />
+        </columns>
+      </TableView>
+    </children>
+</AnchorPane>
